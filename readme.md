@@ -9,6 +9,8 @@ You have been provided a `main.py` file which fills data into the `guesses` and 
 
 Your task is to modify the template so that it correctly displays each of the guesses and whether each letter was correct.
 
+**Your job is just to focus on the frontend (HTML/CSS code); you should not need to modify the python.**
+
 ### STEP 1: Display the guesses:
 To start, just be sure you can display the list of guesses that are being passed in correctly. You should get:
 ```
@@ -37,3 +39,6 @@ Try to get output like:
 Now you can try to make it pretty. You'll need to learn some new things about CSS!
 
 ![gw](assets/gwordle.png)
+
+### STEP 4: Integrate:
+Now you can try to merge your frontend with a backend group!  In fact, you can start integration when you finish Step 2.
