@@ -16,16 +16,22 @@ solved = False
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-  # hard code some guesses and results
-  guesses = ["clams", "squid", "ultra"]
-  results = []
-  result = (MISS, HIT, CLOSE, MISS, MISS)
-  results.append(result) # clams
-  result = (MISS, MISS, CLOSE, MISS, MISS)
-  results.append(result) # squid
-  result = (HIT, HIT, HIT, HIT, HIT)
-  results.append(result) # ultra
-  
-  return render_template("index.html", guesses=guesses, results=results)
+  # Initialize session variables if needed
+  if 'guesses' not in session :
+    session['guesses'] = list()
+  if 'results' not in session :
+    session['results'] = list()
+
+  if request.method == 'POST' :
+    # TODO: save the guess to the session
+    # check the result for each letter
+    # see wordle.py for sample game logic
+    pass
+  return render_template("index.html")
+
+@app.route('/reset', methods=['GET', 'POST'])
+def reset():
+  # TODO: reset the game board and the session 
+  return 
 
 app.run(host='0.0.0.0', port=8080)
